@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f0f0;
+}
+
+.box {
+    background: white;
+    color: #333;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template: 30px 70px 1fr 50px / 600px;
+}
+
+/* otra seccion */
+
+.retwitt {
+    display: grid;
+    grid-template: 1fr / 70px 1fr;
+
+    font-size: 14px;
+    color: grey;
+}
+
+.retwitt-icon {
+    text-align: right;
+}
+
+.retwitt-info p {
+  margin: 0 0 0 20px;
+}
+
+/* otra seccion */
+
+.profile {
+    display: grid;
+    grid-template: 1fr / 70px 1fr;
+}
+
+.profile-photo img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.profile-details h4 {
+    margin: 0 0 5px 20px;
+    font-size: 16px;
+    color: grey;
+    font-weight: 400;
+}
+
+.profile-details h4 strong {
+    color: black;
+    font-weight: bold;
+}
+
+.profile-details i {
+    color: #0084b4;
+}
+
+.profile-details p {
+    margin: 0 0 0 20px;
+    font-size: 14px;
+}
+
+/* otra seccion */
+
+.tweet {
+    display: grid;
+    grid-template: 1fr / 70px 1fr;
+}
+
+.tweet-body {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    margin: 5px 0 0 20px;
+    overflow: hidden;
+}
+
+.tweet-body img {
+    margin: 0 0 5px 0;
+    width: 100%;
+    height: 250px;
+}
+
+.tweet-body-title {
+    margin: 0 0 5px 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.tweet-body-text {
+    margin: 0 0 5px 15px;
+    color: black;
+    font-size: 14px;
+}
+
+.tweet-body-link {
+    margin: 0 0 15px 15px;
+    color: grey;
+    font-size: 14px;
+}
+
+/* otra seccion */
+
+.details {
+    display: grid;
+    grid-template: 1fr / 70px 1fr;
+}
+
+.button-options {
+    color: #aab8c2;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.comment, .retweet {
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.retweet {
+    transition: 1s;
+}
+
+.retweet:hover {
+    transform: rotate(360deg);
+    color: lightgreen;
+}
+
+.like {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-image: url('img/like.png');
+    background-size: 1450px 50px;
+}
+
+.like.is-liked {
+    animation-name: like;
+    animation-duration: .8s;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+@keyframes like {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
